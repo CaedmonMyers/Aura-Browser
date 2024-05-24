@@ -8,31 +8,64 @@
 import SwiftUI
 import SwiftData
 import CloudKit
+import UIKit
+
+
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        return true
+    }
+
+    #if targetEnvironment(macCatalyst)
+    override func buildMenu(with builder: UIMenuBuilder) {
+        super.buildMenu(with: builder)
+        
+        // Ensure this only runs on macOS
+        guard builder.system == .main else { return }
+
+        // Remove unwanted default menu items
+        builder.remove(menu: .format)
+        
+        // Create custom menu actions
+        let option1Action = UIAction(title: "Option 1", image: nil, identifier: nil, discoverabilityTitle: nil, attributes: [], state: .off) { _ in
+            self.handleOption1()
+        }
+        
+        let option2Action = UIAction(title: "Option 2", image: nil, identifier: nil, discoverabilityTitle: nil, attributes: [], state: .off) { _ in
+            self.handleOption2()
+        }
+
+        // Create custom menu
+        let customMenu = UIMenu(title: "Custom Menu", image: nil, identifier: UIMenu.Identifier("com.yourapp.custommenu"), options: [], children: [option1Action, option2Action])
+        
+        // Insert the custom menu into the main menu
+        builder.insertSibling(customMenu, afterMenu: .help)
+    }
+    #endif
+    
+    @objc func handleOption1() {
+        
+    }
+    
+    @objc func handleOption2() {
+        
+    }
+}
+
+
+
 
 
 @main
 struct iPad_browserApp: App {
-    
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            SpaceStorage.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            //return try ModelContainer(for: schema, configurations: [modelConfiguration])
-            var container = try ModelContainer(for: schema, configurations: [modelConfiguration])
-            //container.mainContext.undoManager = UndoManager()
-            
-            return container
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
         UserDefaults.standard.set(0, forKey: "selectedSpaceIndex")
     }
+    
     var body: some Scene {
         WindowGroup {
             LoginView()

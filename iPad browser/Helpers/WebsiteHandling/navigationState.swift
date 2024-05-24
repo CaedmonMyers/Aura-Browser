@@ -20,7 +20,12 @@ class NavigationState : NSObject, WKNavigationDelegate, WKUIDelegate, Observable
     
     @discardableResult func createNewWebView(withRequest request: URLRequest) -> WKWebView {
         let wv = WKWebView()
-        wv.customUserAgent = "Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            wv.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1"
+        }
+        else {
+            wv.customUserAgent = "Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+        }
         wv.navigationDelegate = self
         wv.uiDelegate = self
         webViews.append(wv)

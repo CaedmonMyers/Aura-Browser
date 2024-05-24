@@ -50,7 +50,12 @@ struct LoginView: View {
                 }
             }
             else {
-                ContentView()
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    Mobile()
+                }
+                else {
+                    ContentView()
+                }
             }
         }
     }

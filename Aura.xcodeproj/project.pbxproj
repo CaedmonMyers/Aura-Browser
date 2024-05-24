@@ -41,6 +41,8 @@
 		B9C537FA2BED522200C7DB2B /* IconsArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C537F92BED522200C7DB2B /* IconsArrayStorage.swift */; };
 		B9C537FC2BEF37C700C7DB2B /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C537FB2BEF37C700C7DB2B /* CustomSlider.swift */; };
 		B9C6D0A12BF5E10E001DE904 /* DashboardWidgetStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6D0A02BF5E10E001DE904 /* DashboardWidgetStorage.swift */; };
+		B9F012922C007EBD004A55EB /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F012912C007EBD004A55EB /* Mobile.swift */; };
+		B9F012942C0086FC004A55EB /* MenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F012932C0086FC004A55EB /* MenuBuilder.swift */; };
 		B9F7D6272BD851CC00E186B8 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7D6262BD851CC00E186B8 /* SDWebImageSwiftUI */; };
 		B9FD6CE22BE2A98000A7D0B1 /* CommandBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD6CE12BE2A98000A7D0B1 /* CommandBar.swift */; };
 		B9FD6CE42BE533C500A7D0B1 /* Removing Duplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD6CE32BE533C500A7D0B1 /* Removing Duplicates.swift */; };
@@ -95,6 +97,8 @@
 		B9C537F92BED522200C7DB2B /* IconsArrayStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsArrayStorage.swift; sourceTree = "<group>"; };
 		B9C537FB2BEF37C700C7DB2B /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		B9C6D0A02BF5E10E001DE904 /* DashboardWidgetStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWidgetStorage.swift; sourceTree = "<group>"; };
+		B9F012912C007EBD004A55EB /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		B9F012932C0086FC004A55EB /* MenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBuilder.swift; sourceTree = "<group>"; };
 		B9FD6CE12BE2A98000A7D0B1 /* CommandBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandBar.swift; sourceTree = "<group>"; };
 		B9FD6CE32BE533C500A7D0B1 /* Removing Duplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Removing Duplicates.swift"; sourceTree = "<group>"; };
 		B9FE53FC2BC8DFAC008E0434 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				B95B19E42AABBEE00013AC79 /* iPad_browserApp.swift */,
 				B98256C72BD2A87200F997F5 /* iPad browser.entitlements */,
+				B9F012932C0086FC004A55EB /* MenuBuilder.swift */,
 				B98953A42AABD71300EE3B42 /* iPad-browser-Info.plist */,
 				B98953A22AABCF7200EE3B42 /* GoogleService-Info.plist */,
 				C1BD7D172BDDF65F0078D7B3 /* Data Models */,
@@ -287,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				B98953A72AAC1F4B00EE3B42 /* ContentView.swift */,
+				B9F012912C007EBD004A55EB /* Mobile.swift */,
 				B9798BFC2BF0B92A0012D98E /* Dashboard */,
 				C1BD7D282BDDFDF70078D7B3 /* Sidebar.swift */,
 				B93D9D2B2BDF31A80002D01B /* Today Tab.swift */,
@@ -412,6 +418,7 @@
 				B9C537FA2BED522200C7DB2B /* IconsArrayStorage.swift in Sources */,
 				B90213732AAFDEE200AB708D /* Button Styles.swift in Sources */,
 				B98256CE2BD2E38D00F997F5 /* ThreeDots.swift in Sources */,
+				B9F012922C007EBD004A55EB /* Mobile.swift in Sources */,
 				B918673C2BCB0AFD00C159AB /* Settings.swift in Sources */,
 				B9FD6CE42BE533C500A7D0B1 /* Removing Duplicates.swift in Sources */,
 				B9C537FC2BEF37C700C7DB2B /* CustomSlider.swift in Sources */,
@@ -435,6 +442,7 @@
 				C1BD7D2E2BDE05160078D7B3 /* navigationState.swift in Sources */,
 				C1BD7D1B2BDDF6A30078D7B3 /* SpaceStorage.swift in Sources */,
 				B9798C452BF2908B0012D98E /* LocationManager.swift in Sources */,
+				B9F012942C0086FC004A55EB /* MenuBuilder.swift in Sources */,
 				C1BD7D192BDDF6810078D7B3 /* TabStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
